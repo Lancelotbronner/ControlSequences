@@ -4,26 +4,26 @@
 import PackageDescription
 
 let package = Package(
-	name: "ANSI Sequences",
+	name: "TerminalControl",
 	products: [
 		.library(
-			name: "ControlSequences",
-			targets: ["ControlSequences", "LegacyControlSequences"]
+			name: "TerminalControl",
+			targets: ["TerminalControl", "TerminalControlLegacy"]
 		),
 	],
 	targets: [
 
 		.target(
-			name: "ControlSequences",
+			name: "TerminalControl",
 			path: "Sources/Sequences"),
 
 		.target(
-			name: "LegacyControlSequences",
-			dependencies: ["ControlSequences"],
+			name: "TerminalControlLegacy",
+			dependencies: ["TerminalControl"],
 			path: "Sources/Legacy"),
 		
 		.testTarget(
 			name: "TerminalTests",
-			dependencies: ["LegacyControlSequences", "ControlSequences"]),
+			dependencies: ["TerminalControlLegacy", "TerminalControl"]),
 	]
 )

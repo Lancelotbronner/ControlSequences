@@ -5,7 +5,7 @@
 //  Created by Christophe Bronner on 2022-04-25.
 //
 
-import ControlSequences
+import TerminalControl
 
 //MARK: - C1 Control Codes
 

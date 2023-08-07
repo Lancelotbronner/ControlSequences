@@ -1,5 +1,5 @@
 import XCTest
-import LegacyControlSequences
+import TerminalControlLegacy
 
 final class LegacyTests: XCTestCase {
 	
